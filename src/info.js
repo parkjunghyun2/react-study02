@@ -1,7 +1,13 @@
 import React from "react";
 
 function Info(props) {
-  const { name, gender, age, email, address } = props.profile;
+  const {
+    name,
+    gender,
+    age = "비공개",
+    email,
+    address = "비공개",
+  } = props.profile;
   return (
     <div>
       <h1>이름 : {name}</h1>
